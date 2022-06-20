@@ -7,6 +7,9 @@ Object Pooling is a way to optimize your projects and lower the burden that is p
 ### Requirements
 - [Unity](https://unity.com/) **2021.1** or newer (this project uses Unity's [ObjectPool](https://docs.unity3d.com/2021.1/Documentation/ScriptReference/Pool.ObjectPool_1.html) API)
 
+### Download
+The demo and `.unitypackage` can be found [here](https://github.com/Kh4iri/easy-pools-manager/releases).
+
 # Prefab Pool
 
 ![Prefab Pool](https://user-images.githubusercontent.com/99790424/174535455-49ad19b4-7f1a-4d41-81a9-f6410dc3a60c.png)
