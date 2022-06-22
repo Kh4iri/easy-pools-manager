@@ -44,9 +44,21 @@ namespace EasyPoolsManager
         public PoolableObject Get(Vector3 position, Quaternion rotation)
         {
             var obj = Get();
-            obj.transform.SetPositionAndRotation(position, rotation);
+            obj?.transform.SetPositionAndRotation(position, rotation);
             return obj;
         }
+
+        /// <summary>
+        /// Same as <see cref="Get"/> but the object will be casted to the specified type.
+        /// </summary>
+        public T GetAs<T>() where T : PoolableObject
+            => Get() as T;
+
+        /// <summary>
+        /// Same as <see cref="Get(Vector3, Quaternion)"/> but the object will be casted to the specified type.
+        /// </summary>
+        public T GetAs<T>(Vector3 position, Quaternion rotation) where T : PoolableObject
+            => Get(position, rotation) as T;
 
         /// <summary>
         /// Creates the pool, called from the pools manager.
